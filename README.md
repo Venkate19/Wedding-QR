@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,134 +6,78 @@
     <title>Wedding Invitation</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #f5e5b7, #f5efe7);
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
             text-align: center;
-            font-family: 'Caveat', cursive;
-            color: #8b5e3c;
+            font-family: 'Pacifico', cursive;
+            color: #4b0082;
             overflow: hidden;
             position: relative;
         }
         h1 {
-            font-size: 6rem;
-            margin-top: 50px;
-            color: #ff4b5c;
-            text-transform: uppercase;
-            font-weight: bolder;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+            font-size: 4rem;
+            margin-top: 30px;
+            color: #ff4500;
+            font-weight: bold;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
         }
         .quote {
-            font-size: 1.8rem;
-            color: #d4af37;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 15px;
             font-style: italic;
+            font-family: 'Dancing Script', cursive;
+        }
+        .section-title {
+            font-size: 3rem;
+            color: #ff1493;
+            margin-top: 30px;
+            text-transform: uppercase;
+            font-family: 'Lobster', cursive;
         }
         .p1 {
             font-size: 1.5rem;
             margin-top: 20px;
-            color: #8b5e3c;
+            color: #4b0082;
         }
         .date, .venue {
-            font-size: 1.2rem;
-            color: #d4af37;
+            font-size: 1.5rem;
+            color: #ffd700;
             font-weight: bold;
             margin-bottom: 10px;
         }
         .venue a {
-            color: #4b9bb3;
+            color: #008080;
             text-decoration: none;
+            font-weight: bold;
         }
         .venue a:hover {
-            color: #ff4b5c;
-        }
-        .banner {
-            background: url('https://your-banner-link.com') no-repeat center center/cover;
-            height: 200px;
-            margin-bottom: 20px;
+            color: #ff4500;
         }
         .invitation-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 20px;
             display: inline-block;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-        .moving-car {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: url('https://imgur.com/wrlEz7a.png') no-repeat center center/cover;
-            bottom: 100px; /* Adjust car position */
-            cursor: grab;
-            z-index: 1;
-        }
-        .interactive-venue {
-            position: absolute;
-            left: 10%;
-            top: 10%;
-        }
-        .interactive-venue2 {
-            position: absolute;
-            left: 70%;
-            top: 10%;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
-    <div class="banner"></div>
+    <h1>Welcome to Our Special Day!</h1>
+    <p class="quote">"Love is a journey best traveled together."</p>
+    
     <div class="invitation-box">
-        <h1>ALMA & ROCE</h1>
-        <p class="quote">Two hearts, one journey, a lifetime of love begins!</p>
-        <p class="p1">Join us in celebrating the beautiful occasion of Alma and Roce!</p>
+        <h2 class="section-title">Alma & Roce</h2>
+        <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
         <p class="date">Date: 28th April 2025</p>
         <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
-        <p class="date">Date: 1st May 2025</p>
-        <p class="venue">Venue 2: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
     </div>
-
-    <div class="moving-car" id="car"></div> <!-- Draggable car -->
-
-    <script>
-        let car = document.getElementById('car');
-        let isDragging = false;
-
-        // Start dragging the car
-        car.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            car.style.cursor = 'grabbing';
-            let offsetX = e.clientX - car.getBoundingClientRect().left;
-
-            // Move car as mouse moves
-            const moveCar = (moveEvent) => {
-                if (isDragging) {
-                    let carPosition = moveEvent.clientX - offsetX;
-                    // Restrict the car's position to the screen width
-                    carPosition = Math.max(0, Math.min(carPosition, window.innerWidth - car.offsetWidth));
-                    car.style.left = carPosition + 'px';
-                }
-            };
-
-            // Stop dragging when mouse is released
-            const stopDrag = () => {
-                isDragging = false;
-                car.style.cursor = 'grab';
-
-                // If the car reaches the venue positions, redirect to Google Maps
-                let carPosition = car.getBoundingClientRect().left + car.offsetWidth / 2;
-                if (carPosition >= window.innerWidth * 0.10 && carPosition <= window.innerWidth * 0.20) {
-                    window.location.href = 'https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw'; // Venue 1 Google Maps
-                } else if (carPosition >= window.innerWidth * 0.70 && carPosition <= window.innerWidth * 0.80) {
-                    window.location.href = 'https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'; // Venue 2 Google Maps
-                }
-
-                // Remove event listeners for mouse move and mouse up after drag ends
-                document.removeEventListener('mousemove', moveCar);
-                document.removeEventListener('mouseup', stopDrag);
-            };
-
-            // Attach the event listeners for moving and stopping the car
-            document.addEventListener('mousemove', moveCar);
-            document.addEventListener('mouseup', stopDrag);
-        });
-    </script>
+    
+    <div class="invitation-box" style="margin-top: 30px;">
+        <h2 class="section-title">Reception</h2>
+        <p class="p1">Celebrate the beginning of a new journey with us!</p>
+        <p class="date">Date: 1st May 2025</p>
+        <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
+    </div>
 </body>
 </html>
