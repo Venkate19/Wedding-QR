@@ -20,6 +20,14 @@
             color: #8B0000;
             font-family: 'Great Vibes', cursive;
         }
+        .couple-name {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #b30000;
+            text-transform: uppercase;
+            font-family: 'Great Vibes', cursive;
+            margin-top: 20px;
+        }
         p {
             font-size: 1.8rem;
             margin: 10px 0;
@@ -54,20 +62,79 @@
             font-weight: bold;
             color: #5a3d2b;
         }
-        .stars, .leaves {
+        .venue a {
+            text-decoration: none;
+            color: #8B0000;
+        }
+        .venue a:hover {
+            text-decoration: underline;
+        }
+        .car {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0.3;
-            z-index: -1;
+            bottom: 50px;
+            left: 10%;
+            width: 120px;
+            height: 80px;
+            background: url('https://your-red-black-car-image.com') no-repeat center center/cover;
+            cursor: pointer;
+            animation: moveCar 5s ease-in-out infinite;
         }
-        .stars {
-            background: url('https://your-stars-image.com') repeat;
+        @keyframes moveCar {
+            0% {
+                left: 10%;
+                transform: rotate(0deg);
+            }
+            50% {
+                left: 80%;
+                transform: rotate(10deg);
+            }
+            100% {
+                left: 10%;
+                transform: rotate(0deg);
+            }
         }
-        .leaves {
-            background: url('https://your-leaves-image.com') repeat;
+        .smoke {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 50px;
+            background: url('https://your-smoke-image-link.com') no-repeat center center/cover;
+            opacity: 0.6;
+            animation: smokeEffect 1s infinite;
+        }
+        @keyframes smokeEffect {
+            0% {
+                opacity: 0.6;
+                transform: translateX(-50%) scale(1);
+            }
+            50% {
+                opacity: 0.2;
+                transform: translateX(-50%) scale(1.5);
+            }
+            100% {
+                opacity: 0.6;
+                transform: translateX(-50%) scale(1);
+            }
+        }
+        .location1, .location2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: url('https://your-location-icon-link.com') no-repeat center center/cover;
+            cursor: pointer;
+        }
+        .location1 {
+            left: 10%;
+        }
+        .location2 {
+            right: 10%;
+        }
+        .location1:hover, .location2:hover {
+            opacity: 0.7;
         }
         .quote {
             font-style: italic;
@@ -87,33 +154,60 @@
         .heart.active {
             color: #ff69b4;
         }
+        .fireworks {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: fireworks 1s infinite;
+            z-index: 2;
+        }
+        @keyframes fireworks {
+            0% {
+                transform: translateX(-50%) scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-50%) scale(1.5);
+                opacity: 1;
+            }
+        }
+        .crackers {
+            background: url('https://your-crackers-image.com') no-repeat center center/cover;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: -2;
+        }
     </style>
     <script>
-        setTimeout(function() {
-            window.location.href = "https://maps.google.com/?q=Hebbal+hatti";
-        }, 6000); // Redirects after 6 seconds
-
-        function goToLocation() {
-            let heart = document.getElementById("heart");
-            heart.classList.toggle("active");
-            setTimeout(() => {
-                window.location.href = "https://maps.google.com/?q=Hebbal+hatti";
-            }, 500);
+        function goToLocation(location) {
+            if (location === 1) {
+                window.location.href = "https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw";
+            } else if (location === 2) {
+                window.location.href = "https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw";
+            }
         }
     </script>
 </head>
 <body>
     <div class="stars"></div>
     <div class="leaves"></div>
+    <div class="fireworks"></div>
+    <div class="crackers"></div>
     <div class="banner"></div>
     <div class="invitation-box">
         <h1>With Love & Blessings</h1>
         <p class="quote">"Two hearts, one journey, a lifetime of love begins!"</p>
-        <h1>Alma & Roce</h1>
+        <h1 class="couple-name">ALMA & ROCE</h1>
         <p class="date-box">15th April 2025</p>
         <p class="venue">Venue: At our residence, Hebbal Hatti</p>
         <p>Double-tap the heart to see the location</p>
-        <span class="heart" id="heart" ondblclick="goToLocation()">❤️</span>
     </div>
+    <div class="location1" onclick="goToLocation(1)"></div>
+    <div class="location2" onclick="goToLocation(2)"></div>
+    <div class="car"></div>
+    <div class="smoke"></div>
 </body>
 </html>
