@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>Wedding Invitation</title>
     <style>
         body {
@@ -15,12 +15,12 @@
             padding: 0;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 100%;
             padding: 20px;
+            box-sizing: border-box;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #ff8c00;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.6);
@@ -33,13 +33,13 @@
             font-family: 'Dancing Script', cursive;
         }
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #8a2be2;
             text-transform: uppercase;
             font-family: 'Lobster', cursive;
         }
         .p1, .date, .venue {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin: 15px 0;
         }
         .venue a {
