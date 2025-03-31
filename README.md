@@ -16,9 +16,9 @@
         h1 {
             font-size: 4rem;
             margin-top: 30px;
-            color: #ff4500;
+            color: #ff8c00;
             font-weight: bold;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.6);
             font-family: 'Satisfy', cursive;
         }
         .quote {
@@ -68,43 +68,45 @@
             0% { text-shadow: 0 0 10px rgba(70, 130, 180, 0.8); }
             100% { text-shadow: 0 0 20px rgba(70, 130, 180, 1); }
         }
-        .click-indicator {
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-top: 5px;
-            font-style: italic;
-            animation: blink 1.2s infinite alternate;
-        }
-        .invitation-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            border-radius: 20px;
-            display: inline-block;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-        }
-        .firework {
+        .hanging-bells {
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: transparent;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: url('https://your-hanging-bells-image.png') no-repeat center center/contain;
+        }
+        .flower-entrance {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 200px;
+            background: url('https://your-flower-entrance-image.png') no-repeat center center/contain;
+        }
+        .falling-stars {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: gold;
             border-radius: 50%;
-            box-shadow: 0 0 15px 5px rgba(255, 223, 0, 1);
-            animation: explode 0.8s ease-out forwards;
+            opacity: 0.8;
+            animation: fall 3s linear infinite;
         }
-        @keyframes explode {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(3); opacity: 0; }
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            100% { opacity: 0; }
+        @keyframes fall {
+            0% { transform: translateY(-50px); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
         }
     </style>
 </head>
 <body>
+    <div class="flower-entrance"></div>
     <h1>Welcome to Our Grand Celebration!</h1>
     <p class="quote">"A journey of love begins with a spark."</p>
     
+    <div class="hanging-bells"></div>
     <div class="invitation-box">
         <h2 class="section-title">Alma & Roce</h2>
         <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
@@ -122,15 +124,15 @@
     </div>
     
     <script>
-        function createFirework() {
-            const firework = document.createElement("div");
-            firework.classList.add("firework");
-            document.body.appendChild(firework);
-            firework.style.left = Math.random() * window.innerWidth + "px";
-            firework.style.top = Math.random() * window.innerHeight + "px";
-            setTimeout(() => firework.remove(), 800);
+        function createStar() {
+            const star = document.createElement("div");
+            star.classList.add("falling-stars");
+            document.body.appendChild(star);
+            star.style.left = Math.random() * window.innerWidth + "px";
+            star.style.animationDuration = Math.random() * 3 + 2 + "s";
+            setTimeout(() => star.remove(), 3000);
         }
-        setInterval(createFirework, 500);
+        setInterval(createStar, 300);
     </script>
 </body>
 </html>
