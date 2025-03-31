@@ -72,13 +72,22 @@
         .heart:hover {
             color: #d44b56;
         }
+        /* Road Styling */
+        .road {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            background: url('https://imgur.com/jSyrCHz.png') no-repeat center center/cover;
+            background-size: cover;
+        }
         .moving-car {
             position: absolute;
             width: 60px;
             height: 60px;
-            background: url('https://i.imgur.com/FxIRkes.png') no-repeat center center/cover;
-            bottom: 10px; /* Keep the car closer to the bottom */
-            animation: moveCar 5s infinite;
+            background: url('https://imgur.com/wrlEz7a.png') no-repeat center center/cover;
+            bottom: 30px; /* Adjust car position on the road */
+            cursor: pointer;
             z-index: 1;
         }
         .smoke {
@@ -91,32 +100,17 @@
             animation: smokeEffect 5s infinite;
             z-index: 0;
         }
-        .stars {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://your-stars-link.com') repeat;
-            z-index: -1;
-            opacity: 0.5;
-        }
-        @keyframes moveCar {
-            0% { left: 0; }
-            50% { left: 50%; }
-            100% { left: 100%; }
-        }
+        /* Car animation */
         @keyframes smokeEffect {
             0% { left: 60px; }
             100% { left: 110px; }
         }
         .interactive-venue {
             position: absolute;
-            top: 300px; /* Adjust to match venue's position on the screen */
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px;
+            top: 50px;
+            left: 20%;
             background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             cursor: pointer;
@@ -124,16 +118,27 @@
         .interactive-venue:hover {
             background-color: rgba(255, 255, 255, 0.9);
         }
+        .interactive-venue2 {
+            position: absolute;
+            top: 50px;
+            left: 60%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        .interactive-venue2:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
     </style>
 </head>
 <body>
-    <div class="stars"></div>
     <div class="banner"></div>
+    <div class="road"></div>
     <div class="invitation-box">
         <h1>ALMA & ROCE</h1>
         <p class="quote">Two hearts, one journey, a lifetime of love begins!</p>
-        <div class="moving-car" id="movingCar"></div>
-        <div class="smoke"></div>
         <p class="p1">Join us in celebrating the beautiful occasion of Alma and Roce!</p>
         <p class="date">Date: 28th April 2025</p>
         <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
@@ -143,34 +148,40 @@
         <p class="heart" onclick="location.href='https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'">❤️</p>
     </div>
 
-    <div class="interactive-venue" onclick="redirectToVenue()">
+    <!-- Venue 1 -->
+    <div class="interactive-venue" onclick="redirectToVenue1()">
         Click here to visit the venue on Google Maps
     </div>
 
+    <!-- Venue 2 -->
+    <div class="interactive-venue2" onclick="redirectToVenue2()">
+        Click here to visit the venue on Google Maps
+    </div>
+
+    <div class="moving-car" id="movingCar" draggable="true"></div>
+
     <script>
         let car = document.getElementById('movingCar');
-        let carPosition = 0; // Starting position of the car
-        let carSpeed = 2; // Speed of the car movement
-        let venuePosition = 50; // Position where the car will "reach" the venue
+        let carPosition = 0;  // Starting position of the car
+        let speed = 1;        // Speed of the car movement
+        let roadWidth = 100;  // Road width percentage (100% = full width)
 
-        // Function to move the car towards the venue
-        function moveCar() {
-            if (carPosition < venuePosition) {
-                carPosition += carSpeed; // Move the car forward
-                car.style.left = carPosition + '%'; // Update car's position
-                requestAnimationFrame(moveCar); // Continue the animation
-            } else {
-                // When car reaches the venue, redirect to Google Maps
-                redirectToVenue();
+        car.addEventListener('drag', function(e) {
+            // Make sure the car can move along the road (horizontal movement only)
+            if (e.clientX > 0 && e.clientX < window.innerWidth) {
+                carPosition = (e.clientX / window.innerWidth) * roadWidth;
+                car.style.left = carPosition + '%';
+                speed = e.movementX / 10; // Adjust speed based on user dragging speed
             }
+        });
+
+        function redirectToVenue1() {
+            window.location.href = 'https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw'; // Venue 1
         }
 
-        // Function to redirect to the Google Maps venue link
-        function redirectToVenue() {
-            window.location.href = 'https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw'; // Venue 1 map link
+        function redirectToVenue2() {
+            window.location.href = 'https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'; // Venue 2
         }
-
-        moveCar(); // Start moving the car when the page loads
     </script>
 </body>
 </html>
