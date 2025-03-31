@@ -57,22 +57,12 @@
             display: inline-block;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
-        /* Road Styling */
-        .road {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            bottom: 50px;
-            background: url('https://imgur.com/jSyrCHz.png') no-repeat center center/cover;
-            background-size: cover;
-            z-index: 0;
-        }
         .moving-car {
             position: absolute;
             width: 60px;
             height: 60px;
             background: url('https://imgur.com/wrlEz7a.png') no-repeat center center/cover;
-            bottom: 100px; /* Adjust car position on the road */
+            bottom: 100px; /* Adjust car position */
             cursor: grab;
             z-index: 1;
         }
@@ -90,7 +80,6 @@
 </head>
 <body>
     <div class="banner"></div>
-    <div class="road"></div> <!-- Road connecting the car and venues -->
     <div class="invitation-box">
         <h1>ALMA & ROCE</h1>
         <p class="quote">Two hearts, one journey, a lifetime of love begins!</p>
@@ -117,7 +106,7 @@
             const moveCar = (moveEvent) => {
                 if (isDragging) {
                     let carPosition = moveEvent.clientX - offsetX;
-                    // Restrict the car's position to the road width
+                    // Restrict the car's position to the screen width
                     carPosition = Math.max(0, Math.min(carPosition, window.innerWidth - car.offsetWidth));
                     car.style.left = carPosition + 'px';
                 }
