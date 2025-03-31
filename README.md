@@ -39,22 +39,30 @@
             margin-top: 20px;
             color: #4b0082;
         }
-        .date, .venue {
+        .date {
             font-size: 1.5rem;
-            color: #ffd700;
+            color: #32CD32;
             font-weight: bold;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(50, 205, 50, 0.6);
+        }
+        .venue {
+            font-size: 1.5rem;
+            color: #FFD700;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
         }
         .venue a {
-            color: #008080;
+            color: #FFD700;
             text-decoration: none;
             font-weight: bold;
-            position: relative;
             display: inline-block;
-            animation: pulse 1.5s infinite;
+            animation: glow 1.5s infinite alternate;
         }
-        .venue a:hover {
-            color: #ff4500;
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+            100% { text-shadow: 0 0 20px rgba(255, 215, 0, 1); }
         }
         .click-indicator {
             font-size: 1.2rem;
@@ -70,22 +78,18 @@
             display: inline-block;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
         }
-        .firework {
+        .star {
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 5px;
+            height: 5px;
             background-color: gold;
             border-radius: 50%;
-            animation: explode 1s ease-out infinite;
+            animation: twinkle 1s ease-in-out infinite;
         }
-        @keyframes explode {
-            0% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(3); opacity: 0; }
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+            100% { opacity: 0.3; transform: scale(1); }
         }
         @keyframes blink {
             0% { opacity: 1; }
@@ -114,15 +118,15 @@
     </div>
     
     <script>
-        function createFirework() {
-            const firework = document.createElement("div");
-            firework.classList.add("firework");
-            document.body.appendChild(firework);
-            firework.style.left = Math.random() * window.innerWidth + "px";
-            firework.style.top = Math.random() * window.innerHeight + "px";
-            setTimeout(() => firework.remove(), 1000);
+        function createStar() {
+            const star = document.createElement("div");
+            star.classList.add("star");
+            document.body.appendChild(star);
+            star.style.left = Math.random() * window.innerWidth + "px";
+            star.style.top = Math.random() * window.innerHeight + "px";
+            setTimeout(() => star.remove(), 2000);
         }
-        setInterval(createFirework, 500);
+        setInterval(createStar, 300);
     </script>
 </body>
 </html>
