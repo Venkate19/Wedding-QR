@@ -6,7 +6,7 @@
     <title>Wedding Invitation</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad390);
+            background: linear-gradient(135deg, #ffccff, #ff99ff, #ff66ff);
             text-align: center;
             font-family: 'Pacifico', cursive;
             color: #4b0082;
@@ -41,28 +41,28 @@
         }
         .date {
             font-size: 1.5rem;
-            color: #32CD32;
+            color: #FFD700;
             font-weight: bold;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(50, 205, 50, 0.6);
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.6);
         }
         .venue {
             font-size: 1.5rem;
-            color: #FFD700;
+            color: #32CD32;
             font-weight: bold;
             margin-bottom: 10px;
-            text-shadow: 0px 0px 15px rgba(255, 215, 0, 0.8);
+            text-shadow: 0px 0px 15px rgba(50, 205, 50, 0.8);
         }
         .venue a {
-            color: #FFD700;
+            color: #32CD32;
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
             animation: glow 1.5s infinite alternate;
         }
         @keyframes glow {
-            0% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
-            100% { text-shadow: 0 0 20px rgba(255, 215, 0, 1); }
+            0% { text-shadow: 0 0 10px rgba(50, 205, 50, 0.8); }
+            100% { text-shadow: 0 0 20px rgba(50, 205, 50, 1); }
         }
         .click-indicator {
             font-size: 1.2rem;
@@ -98,8 +98,8 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Our Special Day!</h1>
-    <p class="quote">"Love is a journey best traveled together."</p>
+    <h1>Welcome to Our Celebration!</h1>
+    <p class="quote">"A lifetime of love begins with a single step."</p>
     
     <div class="invitation-box">
         <h2 class="section-title">Alma & Roce</h2>
