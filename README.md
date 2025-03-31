@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alma & Roce - Wedding Celebration</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@700&display=swap');
         body {
-            background: linear-gradient(to bottom, #ffd1dc, #ffdde1, #fff5e1);
+            background: linear-gradient(to bottom, #ffecd1, #ffb3c1, #ffc3a0);
             text-align: center;
-            font-family: 'Playfair Display', serif;
-            color: #8b5e3c;
+            font-family: 'Cormorant Garamond', serif;
+            color: #5a3d2b;
             overflow: hidden;
             position: relative;
         }
         h1 {
-            font-size: 3.5rem;
-            margin-top: 50px;
-            color: #b30000;
+            font-size: 4rem;
+            margin-top: 30px;
+            color: #8B0000;
             font-family: 'Great Vibes', cursive;
         }
         p {
-            font-size: 1.7rem;
+            font-size: 1.8rem;
             margin: 10px 0;
         }
         .banner {
-            background: url('https://your-image-link.com') no-repeat center center/cover;
+            background: url('https://your-banner-image.com') no-repeat center center/cover;
             height: 250px;
             margin-bottom: 20px;
+            border-radius: 20px;
         }
         .invitation-box {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.85);
             padding: 30px;
             border-radius: 20px;
             display: inline-block;
@@ -38,44 +39,45 @@
             width: 70%;
         }
         .date-box {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: bold;
-            color: #d4af37;
-            background: #fff3cd;
-            padding: 10px 25px;
+            color: #c0392b;
+            background: #fce4ec;
+            padding: 10px 30px;
             border-radius: 15px;
             display: inline-block;
             margin-top: 15px;
             font-family: 'Great Vibes', cursive;
         }
-        .venue a {
-            color: #8b5e3c;
+        .venue {
+            font-size: 1.8rem;
             font-weight: bold;
-            text-decoration: none;
-            font-size: 1.6rem;
+            color: #5a3d2b;
         }
-        .venue a:hover {
-            text-decoration: underline;
-        }
-        .stars {
+        .stars, .leaves {
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            background: url('https://your-stars-image.com') repeat;
             opacity: 0.3;
             z-index: -1;
+        }
+        .stars {
+            background: url('https://your-stars-image.com') repeat;
+        }
+        .leaves {
+            background: url('https://your-leaves-image.com') repeat;
         }
         .quote {
             font-style: italic;
             font-size: 2rem;
             margin-bottom: 20px;
-            color: #b30000;
+            color: #8B0000;
             font-family: 'Great Vibes', cursive;
         }
         .heart {
-            font-size: 3rem;
+            font-size: 3.5rem;
             cursor: pointer;
             transition: color 0.5s ease-in-out;
             display: inline-block;
@@ -83,7 +85,7 @@
             color: red;
         }
         .heart.active {
-            color: pink;
+            color: #ff69b4;
         }
     </style>
     <script>
@@ -102,14 +104,15 @@
 </head>
 <body>
     <div class="stars"></div>
+    <div class="leaves"></div>
     <div class="banner"></div>
     <div class="invitation-box">
         <h1>With Love & Blessings</h1>
         <p class="quote">"Two hearts, one journey, a lifetime of love begins!"</p>
-        <p>Join us in celebrating the joyful union of <b>Alma & Roce</b></p>
+        <h1>Alma & Roce</h1>
         <p class="date-box">15th April 2025</p>
-        <p class="venue">Venue: At our residence, Hebbal Hatti - <a href="https://maps.google.com/?q=Hebbal+hatti" target="_blank">View on Map</a></p>
-        <p>Double-tap the heart to go to the location</p>
+        <p class="venue">Venue: At our residence, Hebbal Hatti</p>
+        <p>Double-tap the heart to see the location</p>
         <span class="heart" id="heart" ondblclick="goToLocation()">❤️</span>
     </div>
 </body>
