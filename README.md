@@ -80,6 +80,7 @@
             bottom: 0;
             background: url('https://imgur.com/jSyrCHz.png') no-repeat center center/cover;
             background-size: cover;
+            z-index: 0;
         }
         .moving-car {
             position: absolute;
@@ -90,46 +91,26 @@
             cursor: pointer;
             z-index: 1;
         }
-        .smoke {
-            position: absolute;
-            background: url('https://your-smoke-effect-link.com') no-repeat center center;
-            width: 100px;
-            height: 50px;
-            top: 10px;
-            left: 60px;
-            animation: smokeEffect 5s infinite;
-            z-index: 0;
+        .arrow {
+            font-size: 2rem;
+            color: #d4af37;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 10px;
         }
-        /* Car animation */
-        @keyframes smokeEffect {
-            0% { left: 60px; }
-            100% { left: 110px; }
+        .arrow:hover {
+            color: #ff4b5c;
         }
+        /* Adjust position of venue arrows */
         .interactive-venue {
             position: absolute;
-            top: 50px;
             left: 20%;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
-        .interactive-venue:hover {
-            background-color: rgba(255, 255, 255, 0.9);
+            top: 10%;
         }
         .interactive-venue2 {
             position: absolute;
-            top: 50px;
             left: 60%;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
-        .interactive-venue2:hover {
-            background-color: rgba(255, 255, 255, 0.9);
+            top: 10%;
         }
     </style>
 </head>
@@ -148,14 +129,14 @@
         <p class="heart" onclick="location.href='https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'">❤️</p>
     </div>
 
-    <!-- Venue 1 -->
+    <!-- Venue 1 Arrow -->
     <div class="interactive-venue" onclick="redirectToVenue1()">
-        Click here to visit the venue on Google Maps
+        <span class="arrow">➡️</span>
     </div>
 
-    <!-- Venue 2 -->
+    <!-- Venue 2 Arrow -->
     <div class="interactive-venue2" onclick="redirectToVenue2()">
-        Click here to visit the venue on Google Maps
+        <span class="arrow">➡️</span>
     </div>
 
     <div class="moving-car" id="movingCar" draggable="true"></div>
