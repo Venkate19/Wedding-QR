@@ -3,211 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alma & Roce - Wedding Celebration</title>
+    <title>Wedding Invitation</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@700&display=swap');
         body {
-            background: linear-gradient(to bottom, #ffecd1, #ffb3c1, #ffc3a0);
+            background: linear-gradient(to bottom, #f5e5b7, #f5efe7);
             text-align: center;
-            font-family: 'Cormorant Garamond', serif;
-            color: #5a3d2b;
+            font-family: 'Dancing Script', cursive;
+            color: #8b5e3c;
             overflow: hidden;
-            position: relative;
         }
         h1 {
-            font-size: 4rem;
-            margin-top: 30px;
-            color: #8B0000;
-            font-family: 'Great Vibes', cursive;
-        }
-        .couple-name {
-            font-size: 5rem;
-            font-weight: bold;
-            color: #b30000;
+            font-size: 5rem; /* Increased font size */
+            margin-top: 50px;
+            color: #ff4b5c;
             text-transform: uppercase;
-            font-family: 'Great Vibes', cursive;
-            margin-top: 20px;
+            font-weight: bolder; /* Increased font weight for more emphasis */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Added text shadow for better contrast */
         }
-        p {
+        .quote {
             font-size: 1.8rem;
-            margin: 10px 0;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .p1 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #8b5e3c;
+        }
+        .date, .venue {
+            font-size: 1.2rem;
+            color: #d4af37;
+            font-weight: bold;
         }
         .banner {
-            background: url('https://your-banner-image.com') no-repeat center center/cover;
-            height: 250px;
+            background: url('https://your-banner-link.com') no-repeat center center/cover;
+            height: 200px;
             margin-bottom: 20px;
-            border-radius: 20px;
         }
         .invitation-box {
-            background: rgba(255, 255, 255, 0.85);
-            padding: 30px;
-            border-radius: 20px;
-            display: inline-block;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            width: 70%;
-        }
-        .date-box {
-            font-size: 2.8rem;
-            font-weight: bold;
-            color: #c0392b;
-            background: #fce4ec;
-            padding: 10px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
             border-radius: 15px;
             display: inline-block;
-            margin-top: 15px;
-            font-family: 'Great Vibes', cursive;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
-        .venue {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #5a3d2b;
-        }
-        .venue a {
-            text-decoration: none;
-            color: #8B0000;
-        }
-        .venue a:hover {
-            text-decoration: underline;
-        }
-        .car {
+        .decorations {
             position: absolute;
-            bottom: 50px;
-            left: 10%;
-            width: 120px;
-            height: 80px;
-            background: url('https://your-red-black-car-image.com') no-repeat center center/cover;
-            cursor: pointer;
-            animation: moveCar 5s ease-in-out infinite;
+            width: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
         }
-        @keyframes moveCar {
-            0% {
-                left: 10%;
-                transform: rotate(0deg);
-            }
-            50% {
-                left: 80%;
-                transform: rotate(10deg);
-            }
-            100% {
-                left: 10%;
-                transform: rotate(0deg);
-            }
+        .heart {
+            font-size: 2.5rem;
+            color: #ff4b5c;
+            cursor: pointer;
+        }
+        .heart:hover {
+            color: #d44b56;
+        }
+        .moving-car {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://your-car-link.com') no-repeat center center/cover;
+            animation: moveCar 5s infinite;
         }
         .smoke {
             position: absolute;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
+            background: url('https://your-smoke-effect-link.com') no-repeat center center;
+            width: 100px;
             height: 50px;
-            background: url('https://your-smoke-image-link.com') no-repeat center center/cover;
-            opacity: 0.6;
-            animation: smokeEffect 1s infinite;
+            top: 10px;
+            left: 60px;
+            animation: smokeEffect 5s infinite;
+        }
+        @keyframes moveCar {
+            0% { left: 0; }
+            50% { left: 50%; }
+            100% { left: 100%; }
         }
         @keyframes smokeEffect {
-            0% {
-                opacity: 0.6;
-                transform: translateX(-50%) scale(1);
-            }
-            50% {
-                opacity: 0.2;
-                transform: translateX(-50%) scale(1.5);
-            }
-            100% {
-                opacity: 0.6;
-                transform: translateX(-50%) scale(1);
-            }
-        }
-        .location1, .location2 {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background: url('https://your-location-icon-link.com') no-repeat center center/cover;
-            cursor: pointer;
-        }
-        .location1 {
-            left: 10%;
-        }
-        .location2 {
-            right: 10%;
-        }
-        .location1:hover, .location2:hover {
-            opacity: 0.7;
-        }
-        .quote {
-            font-style: italic;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #8B0000;
-            font-family: 'Great Vibes', cursive;
-        }
-        .heart {
-            font-size: 3.5rem;
-            cursor: pointer;
-            transition: color 0.5s ease-in-out;
-            display: inline-block;
-            margin-top: 20px;
-            color: red;
-        }
-        .heart.active {
-            color: #ff69b4;
-        }
-        .fireworks {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: fireworks 1s infinite;
-            z-index: 2;
-        }
-        @keyframes fireworks {
-            0% {
-                transform: translateX(-50%) scale(0.5);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(-50%) scale(1.5);
-                opacity: 1;
-            }
-        }
-        .crackers {
-            background: url('https://your-crackers-image.com') no-repeat center center/cover;
-            height: 200px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            z-index: -2;
+            0% { left: 60px; }
+            100% { left: 110px; }
         }
     </style>
-    <script>
-        function goToLocation(location) {
-            if (location === 1) {
-                window.location.href = "https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw";
-            } else if (location === 2) {
-                window.location.href = "https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw";
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="leaves"></div>
-    <div class="fireworks"></div>
-    <div class="crackers"></div>
     <div class="banner"></div>
     <div class="invitation-box">
-        <h1>With Love & Blessings</h1>
-        <p class="quote">"Two hearts, one journey, a lifetime of love begins!"</p>
-        <h1 class="couple-name">ALMA & ROCE</h1>
-        <p class="date-box">15th April 2025</p>
-        <p class="venue">Venue: At our residence, Hebbal Hatti</p>
-        <p>Double-tap the heart to see the location</p>
+        <h1>ALMA & ROCE</h1>
+        <p class="quote">Two hearts, one journey, a lifetime of love begins!</p>
+        <div class="moving-car"></div>
+        <div class="smoke"></div>
+        <p class="p1">Join us in celebrating the beautiful occasion of Alma and Roce!</p>
+        <p class="date">Date: 15th April 2025</p>
+        <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
+        <p class="venue">Venue 2: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
+        <p class="venue">Reception: IC Church Campus</p>
+        <p class="heart" onclick="location.href='https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'">❤️</p>
     </div>
-    <div class="location1" onclick="goToLocation(1)"></div>
-    <div class="location2" onclick="goToLocation(2)"></div>
-    <div class="car"></div>
-    <div class="smoke"></div>
 </body>
 </html>
