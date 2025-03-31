@@ -10,129 +10,70 @@
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
-            overflow: hidden;
-            position: relative;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
         }
         h1 {
-            font-size: 4rem;
-            margin-top: 30px;
+            font-size: 3rem;
             color: #ff8c00;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.6);
             font-family: 'Satisfy', cursive;
         }
         .quote {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: #6a5acd;
-            margin-bottom: 15px;
             font-style: italic;
             font-family: 'Dancing Script', cursive;
         }
         .section-title {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: #8a2be2;
-            margin-top: 30px;
             text-transform: uppercase;
             font-family: 'Lobster', cursive;
         }
-        .p1 {
-            font-size: 1.8rem;
-            margin-top: 20px;
-            color: #4682b4;
-            font-family: 'Courgette', cursive;
-        }
-        .date {
-            font-size: 1.8rem;
-            color: #d2691e;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(210, 105, 30, 0.6);
-            font-family: 'Cinzel Decorative', cursive;
-        }
-        .venue {
-            font-size: 1.8rem;
-            color: #5a5a5a;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 0px 0px 15px rgba(90, 90, 90, 0.8);
-            font-family: 'Playfair Display', serif;
+        .p1, .date, .venue {
+            font-size: 1.4rem;
+            margin: 15px 0;
         }
         .venue a {
             color: #4682b4;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
-            animation: glow 1.5s infinite alternate;
         }
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px rgba(70, 130, 180, 0.8); }
-            100% { text-shadow: 0 0 20px rgba(70, 130, 180, 1); }
-        }
-        .hanging-bells {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 120px;
-            background: url('https://your-hanging-bells-image.png') no-repeat center center/contain;
-        }
-        .flower-entrance {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 250px;
-            background: url('https://your-flower-entrance-image.png') no-repeat center center/contain;
-        }
-        .falling-stars {
-            position: absolute;
-            width: 6px;
-            height: 6px;
-            background: gold;
-            border-radius: 50%;
-            opacity: 0.9;
-            animation: fall 3s linear infinite;
-        }
-        @keyframes fall {
-            0% { transform: translateY(-50px); opacity: 1; }
-            100% { transform: translateY(100vh); opacity: 0; }
+        .invitation-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="flower-entrance"></div>
-    <h1>Welcome to Our Grand Celebration!</h1>
-    <p class="quote">"A journey of love begins with a spark."</p>
-    
-    <div class="hanging-bells"></div>
-    <div class="invitation-box">
-        <h2 class="section-title">Alma & Roce</h2>
-        <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
-        <p class="date">Date: 28th April 2025</p>
-        <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
-        <p class="click-indicator">(Click venue link for directions!)</p>
+    <div class="container">
+        <h1>Welcome to Our Grand Celebration!</h1>
+        <p class="quote">"A journey of love begins with a spark."</p>
+        
+        <div class="invitation-box">
+            <h2 class="section-title">Alma & Roce</h2>
+            <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
+            <p class="date">Date: 28th April 2025</p>
+            <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
+        </div>
+        
+        <div class="invitation-box">
+            <h2 class="section-title">Reception</h2>
+            <p class="p1">Celebrate the beginning of a new journey with us!</p>
+            <p class="date">Date: 1st May 2025</p>
+            <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
+        </div>
     </div>
-    
-    <div class="invitation-box" style="margin-top: 30px;">
-        <h2 class="section-title">Reception</h2>
-        <p class="p1">Celebrate the beginning of a new journey with us!</p>
-        <p class="date">Date: 1st May 2025</p>
-        <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
-        <p class="click-indicator">(Click venue link for directions!)</p>
-    </div>
-    
-    <script>
-        function createStar() {
-            const star = document.createElement("div");
-            star.classList.add("falling-stars");
-            document.body.appendChild(star);
-            star.style.left = Math.random() * window.innerWidth + "px";
-            star.style.animationDuration = Math.random() * 3 + 2 + "s";
-            setTimeout(() => star.remove(), 3000);
-        }
-        setInterval(createStar, 300);
-    </script>
 </body>
 </html>
