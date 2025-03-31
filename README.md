@@ -74,9 +74,9 @@
         }
         .moving-car {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background: url('https://your-car-link.com') no-repeat center center/cover;
+            width: 60px;
+            height: 60px;
+            background: url('https://i.imgur.com/FxIRkes.png') no-repeat center center/cover;
             bottom: 10px; /* Keep the car closer to the bottom */
             animation: moveCar 5s infinite;
             z-index: 1;
@@ -93,23 +93,13 @@
         }
         .stars {
             position: absolute;
-            top: 0;
+            top: 10px;
             left: 0;
             width: 100%;
             height: 100%;
             background: url('https://your-stars-link.com') repeat;
             z-index: -1;
             opacity: 0.5;
-        }
-        .fireworks {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 150px;
-            background: url('https://your-fireworks-effect-link.com') no-repeat center center;
-            animation: fireworks 1.5s infinite;
         }
         @keyframes moveCar {
             0% { left: 0; }
@@ -119,11 +109,6 @@
         @keyframes smokeEffect {
             0% { left: 60px; }
             100% { left: 110px; }
-        }
-        @keyframes fireworks {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-            100% { opacity: 1; transform: scale(1); }
         }
         .interactive-venue {
             position: absolute;
@@ -149,7 +134,6 @@
         <p class="quote">Two hearts, one journey, a lifetime of love begins!</p>
         <div class="moving-car" id="movingCar"></div>
         <div class="smoke"></div>
-        <div class="fireworks"></div>
         <p class="p1">Join us in celebrating the beautiful occasion of Alma and Roce!</p>
         <p class="date">Date: 28th April 2025</p>
         <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
