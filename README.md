@@ -6,7 +6,7 @@
     <title>Wedding Invitation</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ffb6c1, #dda0dd, #87cefa);
+            background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
@@ -23,7 +23,7 @@
         }
         .quote {
             font-size: 2rem;
-            color: #ffffff;
+            color: #6a5acd;
             margin-bottom: 15px;
             font-style: italic;
             font-family: 'Dancing Script', cursive;
@@ -38,23 +38,23 @@
         .p1 {
             font-size: 1.8rem;
             margin-top: 20px;
-            color: #5f9ea0;
+            color: #4682b4;
             font-family: 'Courgette', cursive;
         }
         .date {
             font-size: 1.8rem;
-            color: #ff8c00;
+            color: #d2691e;
             font-weight: bold;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(255, 140, 0, 0.6);
+            text-shadow: 2px 2px 5px rgba(210, 105, 30, 0.6);
             font-family: 'Cinzel Decorative', cursive;
         }
         .venue {
             font-size: 1.8rem;
-            color: #4682b4;
+            color: #5a5a5a;
             font-weight: bold;
             margin-bottom: 10px;
-            text-shadow: 0px 0px 15px rgba(70, 130, 180, 0.8);
+            text-shadow: 0px 0px 15px rgba(90, 90, 90, 0.8);
             font-family: 'Playfair Display', serif;
         }
         .venue a {
@@ -73,8 +73,8 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background: url('https://your-hanging-bells-image.png') no-repeat center center/contain;
         }
         .flower-entrance {
@@ -83,16 +83,16 @@
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            height: 200px;
+            height: 250px;
             background: url('https://your-flower-entrance-image.png') no-repeat center center/contain;
         }
         .falling-stars {
             position: absolute;
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
             background: gold;
             border-radius: 50%;
-            opacity: 0.8;
+            opacity: 0.9;
             animation: fall 3s linear infinite;
         }
         @keyframes fall {
