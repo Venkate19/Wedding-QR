@@ -57,27 +57,12 @@
             display: inline-block;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
-        .decorations {
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-        .heart {
-            font-size: 2.5rem;
-            color: #ff4b5c;
-            cursor: pointer;
-        }
-        .heart:hover {
-            color: #d44b56;
-        }
         /* Road Styling */
         .road {
             position: absolute;
             width: 100%;
             height: 100px;
-            bottom: 0;
+            bottom: 50px;
             background: url('https://imgur.com/jSyrCHz.png') no-repeat center center/cover;
             background-size: cover;
             z-index: 0;
@@ -87,36 +72,25 @@
             width: 60px;
             height: 60px;
             background: url('https://imgur.com/wrlEz7a.png') no-repeat center center/cover;
-            bottom: 30px; /* Adjust car position on the road */
-            cursor: pointer;
+            bottom: 100px; /* Adjust car position on the road */
+            cursor: grab;
             z-index: 1;
         }
-        .arrow {
-            font-size: 2rem;
-            color: #d4af37;
-            cursor: pointer;
-            padding: 10px;
-            margin-top: 10px;
-        }
-        .arrow:hover {
-            color: #ff4b5c;
-        }
-        /* Adjust position of venue arrows */
         .interactive-venue {
             position: absolute;
-            left: 20%;
+            left: 10%;
             top: 10%;
         }
         .interactive-venue2 {
             position: absolute;
-            left: 60%;
+            left: 70%;
             top: 10%;
         }
     </style>
 </head>
 <body>
     <div class="banner"></div>
-    <div class="road"></div>
+    <div class="road"></div> <!-- Road connecting the car and venues -->
     <div class="invitation-box">
         <h1>ALMA & ROCE</h1>
         <p class="quote">Two hearts, one journey, a lifetime of love begins!</p>
@@ -125,44 +99,52 @@
         <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
         <p class="date">Date: 1st May 2025</p>
         <p class="venue">Venue 2: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
-        <p class="venue">Reception: IC Church Campus</p>
-        <p class="heart" onclick="location.href='https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'">❤️</p>
     </div>
 
-    <!-- Venue 1 Arrow -->
-    <div class="interactive-venue" onclick="redirectToVenue1()">
-        <span class="arrow">➡️</span>
-    </div>
-
-    <!-- Venue 2 Arrow -->
-    <div class="interactive-venue2" onclick="redirectToVenue2()">
-        <span class="arrow">➡️</span>
-    </div>
-
-    <div class="moving-car" id="movingCar" draggable="true"></div>
+    <div class="moving-car" id="car"></div> <!-- Draggable car -->
 
     <script>
-        let car = document.getElementById('movingCar');
-        let carPosition = 0;  // Starting position of the car
-        let speed = 1;        // Speed of the car movement
-        let roadWidth = 100;  // Road width percentage (100% = full width)
+        let car = document.getElementById('car');
+        let isDragging = false;
 
-        car.addEventListener('drag', function(e) {
-            // Make sure the car can move along the road (horizontal movement only)
-            if (e.clientX > 0 && e.clientX < window.innerWidth) {
-                carPosition = (e.clientX / window.innerWidth) * roadWidth;
-                car.style.left = carPosition + '%';
-                speed = e.movementX / 10; // Adjust speed based on user dragging speed
-            }
+        // Start dragging the car
+        car.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            car.style.cursor = 'grabbing';
+            let offsetX = e.clientX - car.getBoundingClientRect().left;
+
+            // Move car as mouse moves
+            const moveCar = (moveEvent) => {
+                if (isDragging) {
+                    let carPosition = moveEvent.clientX - offsetX;
+                    // Restrict the car's position to the road width
+                    carPosition = Math.max(0, Math.min(carPosition, window.innerWidth - car.offsetWidth));
+                    car.style.left = carPosition + 'px';
+                }
+            };
+
+            // Stop dragging when mouse is released
+            const stopDrag = () => {
+                isDragging = false;
+                car.style.cursor = 'grab';
+
+                // If the car reaches the venue positions, redirect to Google Maps
+                let carPosition = car.getBoundingClientRect().left + car.offsetWidth / 2;
+                if (carPosition >= window.innerWidth * 0.10 && carPosition <= window.innerWidth * 0.20) {
+                    window.location.href = 'https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw'; // Venue 1 Google Maps
+                } else if (carPosition >= window.innerWidth * 0.70 && carPosition <= window.innerWidth * 0.80) {
+                    window.location.href = 'https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'; // Venue 2 Google Maps
+                }
+
+                // Remove event listeners for mouse move and mouse up after drag ends
+                document.removeEventListener('mousemove', moveCar);
+                document.removeEventListener('mouseup', stopDrag);
+            };
+
+            // Attach the event listeners for moving and stopping the car
+            document.addEventListener('mousemove', moveCar);
+            document.addEventListener('mouseup', stopDrag);
         });
-
-        function redirectToVenue1() {
-            window.location.href = 'https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw'; // Venue 1
-        }
-
-        function redirectToVenue2() {
-            window.location.href = 'https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw'; // Venue 2
-        }
     </script>
 </body>
 </html>
