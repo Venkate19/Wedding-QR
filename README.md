@@ -62,7 +62,7 @@
         .date {
             font-size: 1.8rem;
             font-family: 'Roboto', sans-serif;
-            color: #4682b4; /* Changed to a cool blue */
+            color: #6a5acd; /* Unique color for the date */
             font-weight: bold;
         }
 
@@ -98,6 +98,31 @@
             margin-bottom: 20px;
         }
 
+        .hand-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .hand-emoji {
+            font-size: 2rem;
+            animation: handMove 1s ease-in-out infinite;
+            margin-top: 5px;
+        }
+
+        @keyframes handMove {
+            0% {
+                transform: translateX(-10px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                transform: translateX(-10px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -109,16 +134,26 @@
             <h2 class="section-title">Alma & Roce</h2>
             <p class="join-us">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
+            
+            <div class="hand-container">
+                <p>Click here:</p>
+                <div class="hand-emoji">👉</div>
+            </div>
+
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a></p>
-            <p class="click-indicator">(Click on the link for location)</p>
         </div>
         
         <div class="invitation-box">
             <h2 class="section-title">Reception</h2>
             <p class="celebrate-text">Celebrate the beginning of a new journey with us!</p>
             <p class="date">Date: 1st May 2025</p>
+            
+            <div class="hand-container">
+                <p>Click here:</p>
+                <div class="hand-emoji">👉</div>
+            </div>
+
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
-            <p class="click-indicator">(Click on the link for location)</p>
         </div>
     </div>
 </body>
