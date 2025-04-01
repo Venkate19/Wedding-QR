@@ -3,14 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&family=Playfair+Display&display=swap" rel="stylesheet">
     <style>
-        @keyframes star-glow {
-            0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
-            50% { text-shadow: 0 0 15px #ffd700, 0 0 30px #ffa500; transform: scale(1.1); }
-            100% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
-        }
-
         body {
             background: linear-gradient(135deg, #f0f8ff, #d3f4ff); /* Light color gradient background */
             text-align: center;
@@ -31,7 +25,7 @@
             color: #ff6347; /* Updated color for Motes Weds Seema */
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 99, 71, 0.6);
-            font-family: 'Pacifico', cursive; /* Elegant handwriting font for MOTES WEDS SEEMA */
+            font-family: 'Playfair Display', serif; /* Elegant font for MOTES WEDS SEEMA */
         }
 
         .quote {
@@ -57,14 +51,13 @@
         }
 
         .join-us, .celebrate-text {
-            font-family: 'Lobster', cursive; /* Modern handwritten font for Join us and Celebrate text */
+            font-family: 'Roboto', sans-serif; /* Clean modern font */
             font-size: 2rem;
             font-weight: bold;
-            background: linear-gradient(90deg, #ff6347, #ff1493, #ff69b4); /* Colorful gradient */
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.7);
-            animation: star-glow 2s infinite alternate;
+            color: #ff4500; /* Stylish orange color */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 10px 0;
         }
 
         .date {
@@ -75,14 +68,20 @@
         }
 
         .venue a {
+            font-family: 'Roboto', sans-serif;
             color: #2e8b57; /* Stylish green for venue link */
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
-            animation: star-glow 1.5s infinite alternate;
-            font-family: 'Roboto', sans-serif;
+            animation: blowing-out 1s ease-in-out infinite;
+        }
+
+        @keyframes blowing-out {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         .click-indicator {
