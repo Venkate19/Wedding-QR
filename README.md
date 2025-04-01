@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <style>
+        @keyframes highlight {
+            0% { background-color: yellow; }
+            100% { background-color: transparent; }
+        }
         body {
             background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
-            overflow-x: hidden;
             margin: 0;
             padding: 0;
         }
@@ -46,6 +49,9 @@
             color: #4682b4;
             text-decoration: none;
             font-weight: bold;
+            animation: highlight 1.5s infinite alternate;
+            padding: 2px 5px;
+            border-radius: 5px;
         }
         .click-indicator {
             font-size: 1rem;
