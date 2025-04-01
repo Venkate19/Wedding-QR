@@ -79,7 +79,7 @@
             <h2 class="section-title">Alma & Roce</h2>
             <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
-            <p class="venue">Venue: At <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
+            <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a> target="_blank">Our Residence, Hebbal Hatti</a></p>
             <p class="click-indicator">(Click venue for location)</p>
         </div>
         
