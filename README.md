@@ -84,7 +84,6 @@
             display: inline-block;
             font-size: 1.8rem; /* Increased font size */
             animation: blowing-out 1s ease-in-out infinite; /* Blowing-out animation */
-            transition: color 0.3s ease-in-out;
         }
 
         .venue a:hover {
