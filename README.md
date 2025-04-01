@@ -28,7 +28,7 @@
 
         h1 {
             font-size: 4rem;
-            color: #ff6347;
+            color: #ff6347; /* Updated color for Motes Weds Seema */
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 99, 71, 0.6);
             font-family: 'Pacifico', cursive; /* Elegant handwriting font for MOTES WEDS SEEMA */
@@ -89,6 +89,17 @@
             margin-bottom: 20px;
         }
 
+        .join-us, .celebrate-text {
+            color: #ff6347; /* Same color for Join us and Celebrate text */
+            font-size: 1.8rem;
+            font-family: 'Roboto', sans-serif; /* Same modern font style as date */
+            font-weight: bold;
+        }
+        
+        .celebrate-text {
+            color: #ff6347; /* Color same as Join us */
+        }
+
     </style>
 </head>
 <body>
@@ -98,7 +109,7 @@
         
         <div class="invitation-box">
             <h2 class="section-title">Alma & Roce</h2>
-            <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
+            <p class="join-us">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a></p>
             <p class="click-indicator">(Click venue for location)</p>
@@ -106,7 +117,7 @@
         
         <div class="invitation-box">
             <h2 class="section-title">Reception</h2>
-            <p class="p1-celebrate">Celebrate the beginning of a new journey with us!</p>
+            <p class="celebrate-text">Celebrate the beginning of a new journey with us!</p>
             <p class="date">Date: 1st May 2025</p>
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
             <p class="click-indicator">(Click venue for location)</p>
