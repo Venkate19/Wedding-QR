@@ -27,13 +27,13 @@
             color: #ff8c00;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.6);
-            font-family: 'Satisfy', cursive;
+            font-family: 'Lobster', cursive; /* Updated font for Motes Weds Seema */
         }
         .quote {
             font-size: 1.8rem;
             color: #6a5acd;
             font-style: italic;
-            font-family: 'Dancing Script', cursive; /* Updated font for a continuous flow */
+            font-family: 'Dancing Script', cursive; /* Cursive font for quote */
             line-height: 1.5;
             padding: 10px;
         }
@@ -77,8 +77,8 @@
         <p class="quote">"A journey of love begins with a spark."</p>
         
         <div class="invitation-box">
-            <h2 class="section-title">MOTES & SEEMA</h2>
-            <p class="p1">Join us in celebrating the union of Motes and Seema!</p>
+            <h2 class="section-title">Alma & Roce</h2>
+            <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a></p>
             <p class="click-indicator">(Click venue for location)</p>
