@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -80,10 +79,11 @@
             color: #2e8b57; /* Stylish green for venue link */
             text-decoration: none;
             font-weight: bold;
-            padding: 5px 10px;
+            padding: 10px 20px; /* Increased padding to make the link larger */
             border-radius: 5px;
             display: inline-block;
-            animation: blowing-out 1s ease-in-out infinite;
+            font-size: 1.8rem; /* Increased font size */
+            animation: blowing-out 1s ease-in-out infinite; /* Blowing-out animation */
         }
 
         @keyframes blowing-out {
