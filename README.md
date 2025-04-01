@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&family=Sacramento&family=Quicksand&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #f0f8ff, #d3f4ff); /* Light color gradient background */
@@ -22,10 +22,10 @@
 
         h1 {
             font-size: 4rem;
-            color: #ff6347; /* Updated color for Motes Weds Seema */
-            font-family: 'Sacramento', cursive; /* Cursive font for Motes Weds Seema */
+            color: #7a5c8d; /* New color for Motes Weds Seema */
+            font-family: 'Quicksand', sans-serif; /* Modern stylish font for Motes Weds Seema */
             font-weight: bold;
-            text-shadow: 3px 3px 8px rgba(255, 99, 71, 0.6);
+            text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
         }
 
         .quote {
@@ -41,22 +41,21 @@
             font-size: 2.5rem;
             color: #8a2be2;
             text-transform: uppercase;
-            font-family: 'Cinzel', serif; /* Stylish font for section titles */
+            font-family: 'Cinzel', serif;
         }
 
         .p1, .date, .venue {
             font-size: 1.5rem;
             margin: 15px 0;
-            font-family: 'Roboto', sans-serif; /* Modern font for text */
+            font-family: 'Roboto', sans-serif;
         }
 
         .join-us, .celebrate-text {
-            font-family: 'Lobster', cursive; /* Stylish cursive font for Join Us and Celebrate */
+            font-family: 'Lobster', cursive; /* Stylish font for Join Us and Celebrate */
             font-size: 1.8rem; /* Smaller size for balance */
-            font-weight: normal;
-            color: #ff4500; /* Stylish orange color */
+            color: #4e77a0; /* A cool, calming blue */
             letter-spacing: 1px;
-            text-transform: uppercase;
+            text-transform: none; /* Changed to normal case */
             margin: 10px 0;
         }
 
@@ -92,7 +91,7 @@
         }
 
         .invitation-box {
-            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for content boxes */
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
