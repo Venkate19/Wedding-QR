@@ -12,7 +12,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #ff9a8b, #fad0c4);
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Stylish gradient background */
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
@@ -27,10 +27,10 @@
         }
 
         h1 {
-            font-size: 3.5rem;
-            color: #ff8c00;
+            font-size: 4rem;
+            color: #ff6347;
             font-weight: bold;
-            text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.6);
+            text-shadow: 3px 3px 8px rgba(255, 99, 71, 0.6);
             font-family: 'Cinzel', serif; /* Stylish and elegant font for MOTES WEDS SEEMA */
         }
 
@@ -57,14 +57,14 @@
         }
 
         .p1-celebrate {
-            font-family: 'Lobster', cursive;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             color: #d2691e;
             font-weight: bold;
         }
 
         .venue a {
-            color: #4682b4;
+            color: #008080; /* Modern teal color for venue link */
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
@@ -82,7 +82,7 @@
         }
 
         .invitation-box {
-            background: white;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for content boxes */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
