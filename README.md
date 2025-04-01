@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;600&family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes star-glow {
             0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
@@ -12,7 +12,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Stylish gradient background */
+            background: linear-gradient(135deg, #f0f8ff, #d3f4ff); /* Light color gradient background */
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
@@ -31,7 +31,7 @@
             color: #ff6347;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 99, 71, 0.6);
-            font-family: 'Cinzel', serif; /* Stylish and elegant font for MOTES WEDS SEEMA */
+            font-family: 'Pacifico', cursive; /* Elegant handwriting font for MOTES WEDS SEEMA */
         }
 
         .quote {
@@ -53,25 +53,25 @@
         .p1, .date, .venue {
             font-size: 1.5rem;
             margin: 15px 0;
-            font-family: 'Poppins', sans-serif; /* Modern font for text */
+            font-family: 'Roboto', sans-serif; /* Modern font for text */
         }
 
         .p1-celebrate {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 1.8rem;
             color: #d2691e;
             font-weight: bold;
         }
 
         .venue a {
-            color: #008080; /* Modern teal color for venue link */
+            color: #2e8b57; /* Stylish green for venue link */
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
             animation: star-glow 1.5s infinite alternate;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         .click-indicator {
