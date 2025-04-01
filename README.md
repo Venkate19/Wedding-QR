@@ -22,8 +22,8 @@
 
         h1 {
             font-size: 4rem;
-            color: #d5006d; /* Dark pink for Motes Weds Seema */
-            font-family: 'Quicksand', sans-serif;
+            color: #ff6347; /* Unique color for Motes Weds Seema */
+            font-family: 'Quicksand', sans-serif; /* Modern stylish font for Motes Weds Seema */
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
         }
@@ -75,22 +75,20 @@
         }
 
         .venue a {
-            font-family: 'Roboto', sans-serif;
-            color: #2e8b57; /* Stylish green for venue link */
+            font-family: 'Lobster', cursive; /* Stylish font style for venue link */
+            color: #ff69b4; /* Dark Pink color for the venue link */
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
-            font-size: 1.5rem;
-            animation: blowing-out 1s ease-in-out infinite;
+            animation: blowing-out 1s ease-in-out infinite; /* Blowing-out animation */
+            font-size: 1.5rem; /* Adjust font size if needed */
         }
 
         @keyframes blowing-out {
             0% { transform: scale(1); }
-            25% { transform: scale(1.05); }
             50% { transform: scale(1.1); }
-            75% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
