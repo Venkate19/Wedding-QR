@@ -62,7 +62,7 @@
         .date {
             font-size: 1.8rem;
             font-family: 'Roboto', sans-serif;
-            color: #a0522d; /* Unique, non-blue color for the date */
+            color: #8a2be2; /* Unique color for date */
             font-weight: bold;
         }
 
@@ -82,12 +82,12 @@
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
-            animation: blowing-out 1.5s ease-in-out infinite;
+            animation: blowing-out 1s ease-in-out infinite;
         }
 
         @keyframes blowing-out {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
 
