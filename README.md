@@ -30,10 +30,12 @@
             font-family: 'Satisfy', cursive;
         }
         .quote {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #6a5acd;
             font-style: italic;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Dancing Script', cursive; /* Updated font for a continuous flow */
+            line-height: 1.5;
+            padding: 10px;
         }
         .section-title {
             font-size: 2rem;
@@ -71,14 +73,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Our Grand Celebration!</h1>
+        <h1>MOTES WEDS SEEMA</h1>
         <p class="quote">"A journey of love begins with a spark."</p>
         
         <div class="invitation-box">
-            <h2 class="section-title">Alma & Roce</h2>
-            <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
+            <h2 class="section-title">MOTES & SEEMA</h2>
+            <p class="p1">Join us in celebrating the union of Motes and Seema!</p>
             <p class="date">Date: 28th April 2025</p>
-            <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence</a></p>
+            <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a></p>
             <p class="click-indicator">(Click venue for location)</p>
         </div>
         
