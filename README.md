@@ -47,6 +47,12 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .click-indicator {
+            font-size: 1rem;
+            color: #ff4500;
+            font-weight: bold;
+            margin-top: 5px;
+        }
         .invitation-box {
             background: white;
             padding: 20px;
@@ -66,6 +72,7 @@
             <p class="p1">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw" target="_blank">Our Residence, Hebbal Hatti</a></p>
+            <p class="click-indicator">(Click venue for location)</p>
         </div>
         
         <div class="invitation-box">
@@ -73,6 +80,7 @@
             <p class="p1">Celebrate the beginning of a new journey with us!</p>
             <p class="date">Date: 1st May 2025</p>
             <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw" target="_blank">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
+            <p class="click-indicator">(Click venue for location)</p>
         </div>
     </div>
 </body>
