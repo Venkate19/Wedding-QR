@@ -22,7 +22,7 @@
 
         h1 {
             font-size: 4rem;
-            color: #7a5c8d; /* New color for Motes Weds Seema */
+            color: #ff6347; /* Unique color for Motes Weds Seema */
             font-family: 'Quicksand', sans-serif; /* Modern stylish font for Motes Weds Seema */
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
@@ -62,8 +62,16 @@
         .date {
             font-size: 1.8rem;
             font-family: 'Roboto', sans-serif;
-            color: #6a5acd; /* Unique color for the date */
+            color: #a0522d; /* Unique, non-blue color for the date */
             font-weight: bold;
+        }
+
+        .venue-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row; /* Aligns items horizontally */
+            gap: 10px; /* Adds space between venue text and link */
         }
 
         .venue a {
@@ -107,20 +115,20 @@
         }
 
         .hand-emoji {
-            font-size: 2rem;
+            font-size: 3rem;
             animation: handMove 1s ease-in-out infinite;
             margin-top: 5px;
         }
 
         @keyframes handMove {
             0% {
-                transform: translateX(-10px);
+                transform: translateY(-10px);
             }
             50% {
-                transform: translateX(10px);
+                transform: translateY(10px);
             }
             100% {
-                transform: translateX(-10px);
+                transform: translateY(-10px);
             }
         }
     </style>
@@ -136,11 +144,14 @@
             <p class="date">Date: 28th April 2025</p>
             
             <div class="hand-container">
-                <p>Click here:</p>
-                <div class="hand-emoji">👉</div>
+                <p>Find us here:</p>
+                <div class="hand-emoji">👇</div> <!-- Hand pointing down -->
             </div>
 
-            <p class="venue">Venue: <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a></p>
+            <div class="venue-container">
+                <p class="venue">Venue:</p>
+                <a href="https://maps.app.goo.gl/2D7oGVRd4yptLPxg9?g_st=aw">At Our Residence, Hebbal Hatti</a>
+            </div>
         </div>
         
         <div class="invitation-box">
@@ -149,11 +160,14 @@
             <p class="date">Date: 1st May 2025</p>
             
             <div class="hand-container">
-                <p>Click here:</p>
-                <div class="hand-emoji">👉</div>
+                <p>Find us here:</p>
+                <div class="hand-emoji">👇</div> <!-- Hand pointing down -->
             </div>
 
-            <p class="venue">Venue: <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a></p>
+            <div class="venue-container">
+                <p class="venue">Venue:</p>
+                <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a>
+            </div>
         </div>
     </div>
 </body>
