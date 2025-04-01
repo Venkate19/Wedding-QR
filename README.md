@@ -22,8 +22,8 @@
 
         h1 {
             font-size: 4rem;
-            color: #ff6347; /* Unique color for Motes Weds Seema */
-            font-family: 'Quicksand', sans-serif; /* Modern stylish font for Motes Weds Seema */
+            color: #d5006d; /* Dark pink for Motes Weds Seema */
+            font-family: 'Quicksand', sans-serif;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
         }
@@ -62,7 +62,7 @@
         .date {
             font-size: 1.8rem;
             font-family: 'Roboto', sans-serif;
-            color: #8a2be2; /* Unique color for date */
+            color: #a0522d; /* Unique, non-blue color for the date */
             font-weight: bold;
         }
 
@@ -82,12 +82,15 @@
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
+            font-size: 1.5rem;
             animation: blowing-out 1s ease-in-out infinite;
         }
 
         @keyframes blowing-out {
             0% { transform: scale(1); }
+            25% { transform: scale(1.05); }
             50% { transform: scale(1.1); }
+            75% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
 
