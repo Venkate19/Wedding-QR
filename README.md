@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,7 +23,7 @@
 
         h1 {
             font-size: 4rem;
-            color: #ff6347; /* Unique color for Motes Weds Seema */
+            color: #ff69b4; /* Unique color for Motes Weds Seema */
             font-family: 'Quicksand', sans-serif; /* Modern stylish font for Motes Weds Seema */
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
@@ -62,7 +63,7 @@
         .date {
             font-size: 1.8rem;
             font-family: 'Roboto', sans-serif;
-            color: #a0522d; /* Unique, non-blue color for the date */
+            color: #800080; /* Unique color for date */
             font-weight: bold;
         }
 
