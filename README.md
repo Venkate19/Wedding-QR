@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&family=Sacramento&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #f0f8ff, #d3f4ff); /* Light color gradient background */
@@ -23,9 +23,9 @@
         h1 {
             font-size: 4rem;
             color: #ff6347; /* Updated color for Motes Weds Seema */
+            font-family: 'Sacramento', cursive; /* Cursive font for Motes Weds Seema */
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 99, 71, 0.6);
-            font-family: 'Playfair Display', serif; /* Elegant font for MOTES WEDS SEEMA */
         }
 
         .quote {
@@ -51,9 +51,9 @@
         }
 
         .join-us, .celebrate-text {
-            font-family: 'Roboto', sans-serif; /* Clean modern font */
-            font-size: 2rem;
-            font-weight: bold;
+            font-family: 'Lobster', cursive; /* Stylish cursive font for Join Us and Celebrate */
+            font-size: 1.8rem; /* Smaller size for balance */
+            font-weight: normal;
             color: #ff4500; /* Stylish orange color */
             letter-spacing: 1px;
             text-transform: uppercase;
