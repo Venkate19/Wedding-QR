@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@400;700&family=Lobster&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@400;600&family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         @keyframes star-glow {
             0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
@@ -12,7 +12,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+            background: linear-gradient(135deg, #ff9a8b, #fad0c4);
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
@@ -27,32 +27,40 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #ff8c00;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(255, 165, 0, 0.6);
-            font-family: 'Playfair Display', serif; /* Elegant font for MOTES WEDS SEEMA */
+            font-family: 'Cinzel', serif; /* Stylish and elegant font for MOTES WEDS SEEMA */
         }
 
         .quote {
             font-size: 1.8rem;
             color: #6a5acd;
             font-style: italic;
-            font-family: 'Dancing Script', cursive; /* Cursive font for quote */
+            font-family: 'Dancing Script', cursive;
             line-height: 1.5;
             padding: 10px;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #8a2be2;
             text-transform: uppercase;
-            font-family: 'Lobster', cursive; /* Stylish font for section titles */
+            font-family: 'Cinzel', serif; /* Stylish font for section titles */
         }
 
         .p1, .date, .venue {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin: 15px 0;
+            font-family: 'Poppins', sans-serif; /* Modern font for text */
+        }
+
+        .p1-celebrate {
+            font-family: 'Lobster', cursive;
+            font-size: 1.8rem;
+            color: #d2691e;
+            font-weight: bold;
         }
 
         .venue a {
@@ -63,6 +71,7 @@
             border-radius: 5px;
             display: inline-block;
             animation: star-glow 1.5s infinite alternate;
+            font-family: 'Poppins', sans-serif;
         }
 
         .click-indicator {
@@ -80,12 +89,6 @@
             margin-bottom: 20px;
         }
 
-        .p1-celebrate {
-            font-family: 'Lobster', cursive; /* Font style for Celebrate text */
-            font-size: 1.5rem;
-            color: #d2691e;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
