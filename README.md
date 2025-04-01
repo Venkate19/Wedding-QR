@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
     <style>
-        @keyframes star-blink {
-            0% { text-shadow: 0 0 5px yellow, 0 0 10px red; }
-            50% { text-shadow: 0 0 10px orange, 0 0 20px yellow; }
-            100% { text-shadow: 0 0 5px yellow, 0 0 10px red; }
+        @keyframes star-glow {
+            0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
+            50% { text-shadow: 0 0 15px #ffd700, 0 0 30px #ffa500; transform: scale(1.1); }
+            100% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
         }
         body {
             background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
@@ -52,7 +52,8 @@
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
-            animation: star-blink 1.5s infinite alternate;
+            display: inline-block;
+            animation: star-glow 1.5s infinite alternate;
         }
         .click-indicator {
             font-size: 1rem;
