@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Invitation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
     <style>
         @keyframes star-glow {
             0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffa500; transform: scale(1); }
@@ -56,9 +56,20 @@
             font-family: 'Roboto', sans-serif; /* Modern font for text */
         }
 
-        .p1-celebrate {
-            font-family: 'Roboto', sans-serif;
+        .join-us, .celebrate-text {
+            font-family: 'Lobster', cursive; /* Modern handwritten font for Join us and Celebrate text */
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff6347, #ff1493, #ff69b4); /* Colorful gradient */
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.7);
+            animation: star-glow 2s infinite alternate;
+        }
+
+        .date {
             font-size: 1.8rem;
+            font-family: 'Roboto', sans-serif;
             color: #d2691e;
             font-weight: bold;
         }
@@ -87,17 +98,6 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-        }
-
-        .join-us, .celebrate-text {
-            color: #ff6347; /* Same color for Join us and Celebrate text */
-            font-size: 1.8rem;
-            font-family: 'Roboto', sans-serif; /* Same modern font style as date */
-            font-weight: bold;
-        }
-        
-        .celebrate-text {
-            color: #ff6347; /* Color same as Join us */
         }
 
     </style>
