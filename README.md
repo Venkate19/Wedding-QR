@@ -50,8 +50,7 @@
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            display: inline-block;
-            width: 45%;
+            width: 100%; /* Ensure it takes full width */
             box-sizing: border-box;
             border: 2px solid #8a2be2;
         }
