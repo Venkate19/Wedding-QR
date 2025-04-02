@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,7 +22,7 @@
 
         h1 {
             font-size: 4rem;
-            color: #8B008B; /* Unique purple shade for Motes Weds Seema */
+            color: #8B008B;
             font-family: 'Quicksand', sans-serif;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
@@ -43,6 +42,18 @@
             color: #8a2be2;
             text-transform: uppercase;
             font-family: 'Cinzel', serif;
+        }
+
+        .invitation-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 45%;
+            box-sizing: border-box;
+            border: 2px solid #8a2be2;
         }
 
         .p1, .date, .venue {
@@ -76,15 +87,18 @@
         }
 
         .venue a {
-            font-family: 'Pacifico', cursive; /* New stylish font for venue link */
+            font-family: cursive;
             color: #ff69b4;
             text-decoration: none;
             font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: 2px solid #ff69b4;
             display: inline-block;
             animation: blowing-out 1s ease-in-out infinite;
             font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         @keyframes blowing-out {
@@ -103,7 +117,7 @@
 
         .hand-emoji {
             font-size: 3rem;
-            animation: handMove 1s ease-in-out infinite;
+            animation: handMove 1s ease-in-out infinite, bounce 0.5s ease-in-out infinite alternate;
             margin-top: 5px;
         }
 
@@ -116,6 +130,18 @@
             }
             100% {
                 transform: translateY(-10px);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
             }
         }
     </style>
