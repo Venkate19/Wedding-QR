@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Roboto:wght@400;700&family=Lobster&family=Sacramento&family=Quicksand&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #f0f8ff, #d3f4ff); /* Light color gradient background */
+            background: linear-gradient(135deg, #f0f8ff, #d3f4ff);
             text-align: center;
             font-family: 'Great Vibes', cursive;
             color: #4b0082;
@@ -22,8 +23,8 @@
 
         h1 {
             font-size: 4rem;
-            color: #ff6347; /* Unique color for Motes Weds Seema */
-            font-family: 'Quicksand', sans-serif; /* Modern stylish font for Motes Weds Seema */
+            color: #ffb6c1; /* Lighter pink */
+            font-family: 'Quicksand', sans-serif;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
         }
@@ -50,19 +51,8 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        .join-us, .celebrate-text {
-            font-family: 'Lobster', cursive; /* Stylish font for Join Us and Celebrate */
-            font-size: 1.8rem; /* Smaller size for balance */
-            color: #4e77a0; /* A cool, calming blue */
-            letter-spacing: 1px;
-            text-transform: none; /* Changed to normal case */
-            margin: 10px 0;
-        }
-
-        .date {
-            font-size: 1.8rem;
-            font-family: 'Roboto', sans-serif;
-            color: #a0522d; /* Unique, non-blue color for the date */
+        .venue {
+            font-size: 1.2rem; /* Smaller font size */
             font-weight: bold;
         }
 
@@ -70,67 +60,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: row; /* Aligns items horizontally */
-            gap: 10px; /* Adds space between venue text and link */
+            flex-direction: row;
+            gap: 10px;
         }
 
         .venue a {
-            font-family: 'Lobster', cursive; /* Stylish font style for venue link */
-            color: #ff69b4; /* Dark Pink color for the venue link */
+            font-family: 'Lobster', cursive;
+            color: #ff69b4;
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
-            animation: blowing-out 1s ease-in-out infinite; /* Blowing-out animation */
-            font-size: 1.5rem; /* Adjust font size if needed */
+            font-size: 1.5rem;
+            animation: blink 1s infinite alternate;
         }
 
-        @keyframes blowing-out {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .click-indicator {
-            font-size: 1rem;
-            color: #ff4500;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-        .invitation-box {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .hand-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-
-        .hand-emoji {
-            font-size: 3rem;
-            animation: handMove 1s ease-in-out infinite;
-            margin-top: 5px;
-        }
-
-        @keyframes handMove {
-            0% {
-                transform: translateY(-10px);
-            }
-            50% {
-                transform: translateY(10px);
-            }
-            100% {
-                transform: translateY(-10px);
-            }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -143,11 +92,6 @@
             <h2 class="section-title">Alma & Roce</h2>
             <p class="join-us">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
-            
-            <div class="hand-container">
-                <p>Find us here:</p>
-                <div class="hand-emoji">👇</div> <!-- Hand pointing down -->
-            </div>
 
             <div class="venue-container">
                 <p class="venue">Venue:</p>
@@ -160,11 +104,6 @@
             <p class="celebrate-text">Celebrate the beginning of a new journey with us!</p>
             <p class="date">Date: 1st May 2025</p>
             
-            <div class="hand-container">
-                <p>Find us here:</p>
-                <div class="hand-emoji">👇</div> <!-- Hand pointing down -->
-            </div>
-
             <div class="venue-container">
                 <p class="venue">Venue:</p>
                 <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a>
