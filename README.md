@@ -23,7 +23,7 @@
 
         h1 {
             font-size: 4rem;
-            color: #ffb6c1; /* Lighter pink */
+            color: #8B008B; /* Unique purple shade for Motes Weds Seema */
             font-family: 'Quicksand', sans-serif;
             font-weight: bold;
             text-shadow: 3px 3px 8px rgba(122, 92, 141, 0.6);
@@ -51,8 +51,19 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        .venue {
-            font-size: 1.2rem; /* Smaller font size */
+        .join-us, .celebrate-text {
+            font-family: 'Lobster', cursive;
+            font-size: 1.8rem;
+            color: #4e77a0;
+            letter-spacing: 1px;
+            text-transform: none;
+            margin: 10px 0;
+        }
+
+        .date {
+            font-size: 1.8rem;
+            font-family: 'Roboto', sans-serif;
+            color: #a0522d;
             font-weight: bold;
         }
 
@@ -65,21 +76,47 @@
         }
 
         .venue a {
-            font-family: 'Lobster', cursive;
+            font-family: 'Pacifico', cursive; /* New stylish font for venue link */
             color: #ff69b4;
             text-decoration: none;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
+            animation: blowing-out 1s ease-in-out infinite;
             font-size: 1.5rem;
-            animation: blink 1s infinite alternate;
         }
 
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes blowing-out {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .hand-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .hand-emoji {
+            font-size: 3rem;
+            animation: handMove 1s ease-in-out infinite;
+            margin-top: 5px;
+        }
+
+        @keyframes handMove {
+            0% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
@@ -92,6 +129,11 @@
             <h2 class="section-title">Alma & Roce</h2>
             <p class="join-us">Join us in celebrating the union of Alma and Roce!</p>
             <p class="date">Date: 28th April 2025</p>
+            
+            <div class="hand-container">
+                <p>Find us here:</p>
+                <div class="hand-emoji">👇</div>
+            </div>
 
             <div class="venue-container">
                 <p class="venue">Venue:</p>
@@ -104,6 +146,11 @@
             <p class="celebrate-text">Celebrate the beginning of a new journey with us!</p>
             <p class="date">Date: 1st May 2025</p>
             
+            <div class="hand-container">
+                <p>Find us here:</p>
+                <div class="hand-emoji">👇</div>
+            </div>
+
             <div class="venue-container">
                 <p class="venue">Venue:</p>
                 <a href="https://maps.app.goo.gl/Kzf5KGDBpRRDwzky9?g_st=aw">Immaculate Conception Church, Nandagad, Khanapur, Belgaum</a>
